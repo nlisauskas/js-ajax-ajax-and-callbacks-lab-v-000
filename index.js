@@ -23,5 +23,5 @@ function searchRepositories() {
     document.getElementById("results").innerHTML = repoList
   }).fail(function() {
     displayError();
-  })
+  });
 }
