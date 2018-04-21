@@ -35,12 +35,11 @@ function showCommits(el) {
     console.log(data);
 
     const commits = data;
-    const commitList = "<ul>" + commits.map(r => {
+    const commitList = "<ul>" + commits.map(c => {
       return (`
         <li>
-        <h2><a href="${r.html_url}">${r.name}</a></h2>
-        <p>Description: ${r.description}</p>
-        <p>Created by: ${r.owner.login}</p>
+        <p>SHA: ${c.sha}</p>
+        <p>Author: ${c.commit.author.name}</p>
         <a href="#" onclick="showCommits(this)" data-repository="${r.name}" data-owner="${r.owner.login}">Show Commits</a>
         <p><img src="${r.owner.avatar_url}" height="45" width="45"></p>
         </li>
