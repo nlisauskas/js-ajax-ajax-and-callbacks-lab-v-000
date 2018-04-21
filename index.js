@@ -35,7 +35,7 @@ function showCommits(el) {
     console.log(data);
 
     const commits = data;
-    const repoList = "<ul>" + repos.map(r => {
+    const commitList = "<ul>" + repos.map(r => {
       return (`
         <li>
         <h2><a href="${r.html_url}">${r.name}</a></h2>
