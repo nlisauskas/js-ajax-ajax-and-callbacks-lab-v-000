@@ -7,5 +7,7 @@ function searchRepositories() {
 
   $.get(url, function(data) {
     console.log(data.items);
+
+    const repos = data.items;
   })
 }
