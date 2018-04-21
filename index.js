@@ -42,7 +42,7 @@ function showCommits(el) {
         <p>Author: ${c.commit.author.name}</p>
         <p>Author login: ${c.author.login}</p>
         <a href="#" onclick="showCommits(this)" data-repository="${r.name}" data-owner="${r.owner.login}">Show Commits</a>
-        <p><img src="${r.owner.avatar_url}" height="45" width="45"></p>
+        <p><img src="${c.author.avatar_url}" height="45" width="45"></p>
         </li>
         `)
     }).join('') + "</ul>"
