@@ -32,9 +32,9 @@ function showCommits(el) {
   const url = "https://api.github.com/repos/" + owner + "/" + repo + "/commits";
 
   $.get(url, function(data) {
-    console.log(data.items);
+    console.log(data);
 
-    const repos = data.items;
+    const commits = data;
     const repoList = "<ul>" + repos.map(r => {
       return (`
         <li>
