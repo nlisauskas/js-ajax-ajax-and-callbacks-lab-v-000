@@ -25,3 +25,9 @@ function searchRepositories() {
     displayError();
   });
 }
+
+function showCommits(el) {
+  const owner = el.dataset.owner
+  const repo = el.dataset.repository
+  const url = "https://api.github.com/repos/" + owner + "/" + repo + "/commits";
+}
