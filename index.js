@@ -45,7 +45,7 @@ function showCommits(el) {
         </li>
         `)
     }).join('') + "</ul>"
-    document.getElementById("results").innerHTML = repoList
+    document.getElementById("details").innerHTML = commitList
   }).fail(function() {
     displayError();
   });
